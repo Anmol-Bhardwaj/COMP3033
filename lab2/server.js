@@ -3,7 +3,6 @@ const url = require("url");
 
 const app = connect();
 
-// Handler for /lab2
 function lab2Handler(req, res) {
   const query = url.parse(req.url, true).query;
   const method = query.method;
@@ -45,10 +44,8 @@ function lab2Handler(req, res) {
   }
 }
 
-// Route handler
 app.use("/lab2", lab2Handler);
 
-// Start server
 app.listen(3000, () => {
   console.log("Server running at http://localhost:3000/");
 });
